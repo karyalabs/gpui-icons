@@ -4,6 +4,9 @@
 //! Native and WASM applications render the same upstream SVG bytes, with no
 //! network requests, font glyphs, or substitute shapes.
 
+#[cfg(feature = "gpui-fast")]
+extern crate gpui_fast as gpui;
+
 use std::{borrow::Cow, io};
 
 use gpui::{AssetSource, Result, SharedString, Svg, svg};
